@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arquitectura de la información de un portal público | Diego Villaverde Prado</title>
+<meta name="description" content="Caso de estudio: rediseño de la arquitectura de la información de un portal de administración pública con enorme volumen de contenido heredado.">
+<link rel="icon" href="../favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../favicon/apple-touch-icon.png">
+<link rel="manifest" href="../favicon/site.webmanifest">
+<meta name="theme-color" content="#f3f5f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1316" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="top">
+<a class="skip" href="#content">Saltar al contenido</a>
+<header>
+<div class="wrap">
+<a class="brand" href="../index.html">Diego Villaverde Prado</a>
+<div class="tools">
+<nav aria-label="Principal">
+<a href="../index.html#projects">Proyectos</a>
+<a href="../index.html#lab" hidden>Laboratorio</a>
+<a href="../about.html">Sobre mí</a>
+<a href="#contact">Contacto</a>
+</nav>
+<button class="theme" type="button" aria-label="Modo oscuro" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button>
+</div>
+</div>
+</header>
+
+<main id="content" class="wrap">
+<div class="case-head">
+<a class="back" href="../index.html#projects">← Proyectos</a>
+<h1>Rediseño de la arquitectura de la información de un portal de administración pública</h1>
+<p class="subtitle">Cómo ordenar un portal con enorme volumen de contenido heredado dentro de un tema base compartido.</p>
+<p class="nda">Por acuerdos de confidencialidad, este caso está anonimizado y los detalles son más generales. Puedo explicarte el proceso con más profundidad en una conversación.</p>
+<p class="prose">Lideré la definición de la arquitectura de la información y la fase de prototipado de un portal público que sirve a múltiples perfiles de usuarios. Trabajé en un equipo multidisciplinar, desde el diagnóstico inicial hasta la validación con usuarios y el diseño de prototipos.</p>
+<dl class="facts">
+<dt>Cliente</dt><dd>Administración pública</dd>
+<dt>Duración</dt><dd>Más de un año</dd>
+<dt>Rol</dt><dd>Diseñador UX principal</dd>
+<dt>Equipo</dt><dd>Perfil UX, Perfil UX/UI, Perfil UI</dd>
+<dt>Servicios</dt><dd>Análisis y auditoría, benchmark, mapa de experiencia, arquitectura de la información, tree testing, wireframes</dd>
+<dt>Resultado</dt><dd>Arquitectura más clara y sencilla, validada con usuarios y aceptada por el cliente</dd>
+</dl>
+</div>
+
+<article class="prose">
+<h2>Objetivo</h2>
+<p>El portal tenía que servir a perfiles muy distintos y a la vez dar cabida a un gran volumen de contenido heredado y a numerosas integraciones con portales de terceros. El objetivo era que cada perfil encontrara lo que necesitaba sin tener que entender cómo está organizada la administración, y hacerlo dentro de un tema base técnico compartido con otros portales, que el cliente quería diferenciar y personalizar.</p>
+
+<h2>Proceso</h2>
+<h3>Auditoría y análisis inicial</h3>
+<p>Empezamos con un diagnóstico del portal existente. Para ello se hizo un análisis y se contrastó información de múltiples fuentes: informe de SEO, estado de accesibilidad, análisis de datos, benchmark de portales similares, inventario de servicios e integraciones de terceros y un mapa de experiencia con las necesidades de los perfiles en diferentes etapas del producto.</p>
+<h3>Retos y limitaciones</h3>
+<p>El reto principal era a la vez técnico y de producto: el portal debía apoyarse en un tema base compartido con otros portales de la administración, mientras el cliente pedía mucha personalización y diferenciación. A eso se sumaban un volumen enorme de contenido, en muchos casos obsoleto, y numerosas integraciones con portales de terceros.</p>
+<p>Además, el cliente quería dar mucho peso a la parte institucional, pero los datos pedían centrarse en las necesidades de la ciudadanía.</p>
+<h3>Ejecución</h3>
+<p>Partimos de una réplica de la arquitectura existente y la fuimos evolucionando en varias versiones, agrupada por perfiles. En paralelo, sesiones con los gestores de cada departamento para decidir qué contenido mantener y qué eliminar, y sesiones de viabilidad técnica recurrentes con desarrollo antes de cada validación y con el equipo de accesibilidad dada la naturaleza del portal.</p>
+<p>Para validar, hicimos un piloto interno y después un tree test con dos segmentos de usuarios. Aplicamos las mejoras que recomendaba el test, validamos la propuesta con el cliente y pasamos a prototipos en baja fidelidad, con tipologías de página para acelerar las validaciones.</p>
+
+<h2>Decisiones clave</h2>
+<section class="decision">
+<h3>Por dónde empezar</h3>
+<dl>
+<dt>Opciones</dt><dd>Analizar en detalle todas las secciones y contenidos del portal o extraer patrones y documentar todos los hallazgos.</dd>
+<dt>Elección</dt><dd>Se realizó una auditoría general, benchmark de portales similares, mapa de experiencia de servicios del portal y se contrastó con informes de SEO para detectar secciones más sensibles, tipologías de contenido y patrones comunes de categorización.</dd>
+<dt>Por qué</dt><dd>Analizar y mapear todo el volumen de información que contenía el portal desplazaría demasiado el calendario del roadmap, y dado que mucha parte de esa información se iba a descartar se adaptó la estrategia para optimizar los esfuerzos.</dd>
+<dt>Resultado</dt><dd>Conseguimos una fotografía muy completa del estado actual del portal en el punto de partida y nos sirvió para plantear dudas de cara a las sesiones con cliente.</dd>
+</dl>
+</section>
+<section class="decision">
+<h3>Optimizando el prototipo en baja fidelidad</h3>
+<dl>
+<dt>Opciones</dt><dd>Realizar prototipos de cada flujo individual o generar unas tipologías de páginas comunes con sus flujos validados.</dd>
+<dt>Elección</dt><dd>Decidí mapear todas las tipologías de páginas (Distribuidora, Noticia, Trámite, Buscador...) y generar los flujos en baja fidelidad para validarlos con cliente y desarrollo, agilizando el proceso de validación y facilitando la comprensión de la fase de definición con cliente.</dd>
+<dt>Por qué</dt><dd>El nivel de detalle de baja fidelidad basada en contenidos del portal antiguo generaba conversaciones que se alejaban del objetivo de la fase de definición.</dd>
+<dt>Resultado</dt><dd>Se validaron las tipologías de página y eso permitió al equipo de desarrollo empezar a trabajar en la estructura general del layout mientras se avanzaba con la categorización de la información y la UI.</dd>
+</dl>
+</section>
+<section class="decision">
+<h3>Preguntando a usuarios reales</h3>
+<dl>
+<dt>Opciones</dt><dd>Realizar tests con usuarios sobre prototipo interactivo o evaluar la encontrabilidad de la información de la nueva arquitectura con un tree test.</dd>
+<dt>Elección</dt><dd>Se enfocaron los esfuerzos en trabajar una arquitectura de la información robusta dados los diferentes perfiles que visitan el portal con sus propias necesidades. Para ello se combinaron múltiples sesiones con los gestores del portal, análisis de consultas de usuarios reales y resultados del tree test sobre la nueva propuesta de arquitectura de la información.</dd>
+<dt>Por qué</dt><dd>El mayor punto de fricción identificado era la encontrabilidad de la información al navegar por las secciones. Especialmente se evaluó la terminología y las agrupaciones por temáticas. Las tareas se plantearon atacando las secciones más representativas con el objetivo de tener una muestra lo más completa posible.</dd>
+<dt>Resultado</dt><dd>El feedback recibido y los resultados de las tareas reflejaban una tasa de éxito que tanto el equipo como el cliente consideraron muy satisfactoria, mostrando que las tareas clave se encontraban con facilidad.</dd>
+</dl>
+</section>
+
+<h2>Resultado</h2>
+<p>Descartamos más de un tercio de la información obsoleta y categorizamos todo el contenido en las nuevas secciones.</p>
+<p>El cliente respetó los resultados del tree test y su criterio al cerrar la arquitectura, con algún ajuste menor por preferencias de los usuarios gestores.</p>
+<p>La nueva estructura resultó mucho más clara y sencilla que la de partida, tanto en las fricciones detectadas antes como en el feedback recogido durante el test. No hubo medición posterior a la publicación, el impacto se apoya en la comparación de fricciones previas, los resultados del test y la valoración del cliente.</p>
+
+<h2>Aprendizaje</h2>
+<ul>
+<li>Si fuera posible, realizaría un segundo test para comparar punto de partida con la nueva propuesta.</li>
+<li>En casos de usuarios de poca destreza tecnológica, el prototipado en baja fidelidad requiere controlar el nivel de detalle para sacar todo el valor de la fase de definición.</li>
+</ul>
+</article>
+<nav class="pager" aria-label="Proyectos"><a href="b2b-platform.html">Siguiente proyecto →</a></nav>
+</main>
+
+<footer id="contact">
+<div class="wrap">
+<h2>Puedo contarte más sobre el proceso.</h2>
+<ul>
+<li><a href="mailto:diego.villaverdeprado@gmail.com">Contacto</a></li>
+<li><a href="https://www.linkedin.com/in/diego-villaverde/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (se abre en una pestaña nueva)">LinkedIn</a></li>
+</ul>
+<p class="to-top"><a href="#top">Volver arriba ↑</a></p>
+</div>
+</footer>
+<script>
+const b=document.querySelector(".theme"),r=document.documentElement,m=matchMedia("(prefers-color-scheme:dark)");
+const dark=()=>r.dataset.theme?r.dataset.theme==="dark":m.matches;
+const sync=()=>b.setAttribute("aria-pressed",dark());
+b.onclick=()=>{const n=dark()?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}sync()};
+m.onchange=sync;sync();
+</script>
+</body>
+</html>
