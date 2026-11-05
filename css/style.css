@@ -79,3 +79,4 @@ footer a{text-underline-offset:.3em}
 .back{display:inline-block;margin-bottom:1.5rem;color:var(--muted);text-decoration:none}
 .back:hover{color:var(--fg);text-decoration:underline;text-underline-offset:.3em}
 .to-top{text-align:right;margin:2rem 0 0}
+nav a[aria-current]{color:var(--fg)}
